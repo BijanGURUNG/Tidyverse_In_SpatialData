@@ -232,3 +232,5 @@ table_days
 # incomplete vector data, i.e. number_days1 and number_days19
 
 # Now, we have number of Fridays, Mondays, etc. in each month of our data. 
+
+# Please contact me if you some of the lines are not clear to you. bijangrg@gmail.com 
