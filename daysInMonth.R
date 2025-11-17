@@ -3,11 +3,15 @@
 
 install.packages("foreign")
 library(foreign)
-install.packages("tidyverse")
+# install.packages("tidyverse")
 library(tidyverse)
 
 # Export the shapefile to dbf format in ArcGIS Pro and r can easily read the .dbf file.
-df <- read.dbf("D:/olym/Tidyverse_In_SpatialData/OLYM_SummaryWaypoints.dbf", as.is = FALSE)
+# df <- read.dbf("C:/Users/bijangurung/Desktop/olym/Tidyverse_In_SpatialData/OLYM_SummaryWaypoints.dbf", as.is = FALSE)
+
+# Analyzing the new set of waypoints - directly selected from MergedWaypoints <2500ft AGL
+# df <- read.dbf("C:/Users/bijangurung/Desktop/olym/Tidyverse_In_SpatialData/MergedWaypoints_below2500_clipHalfmile_UTM10N.dbf", as.is = FALSE)
+df <- read.dbf("D:/HALE/HALE_SummarizeWaypoint.dbf", as.is = FALSE)
 
 glimpse(df)
 
@@ -47,6 +51,7 @@ days_month <- df1 %>%
   summarize(Number_days = n_distinct(Day))
 
 days_month
+print(days_month, n = 30)
 
 #--------------------------------------------------------------------------------------------
 # The analysis required to calculate the average of each day of the week, i.e. average results on 
