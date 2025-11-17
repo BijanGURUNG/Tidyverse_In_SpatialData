@@ -233,4 +233,4 @@ table_days
 
 # Now, we have number of Fridays, Mondays, etc. in each month of our data. 
 
-# Please contact me if you some of the lines are not clear to you. bijangrg@gmail.com 
+# Please contact me if some of the code lines are not clear to you. bijangrg@gmail.com 
