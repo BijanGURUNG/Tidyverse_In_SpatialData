@@ -96,7 +96,7 @@ head(df2)
 
 # Need to count the days of week in each month; each month is unique because they are represented by
 # "2021-07", "2021-08", etc. Need to count the number of Fridays, Mondays, etc. in that month. 
-# Apply filter() to select only that month, then apply group_by() the name of the day of the week
+# First, apply filter() to select only that month, then apply group_by() the name of the day of the week
 # then count the Day because Day will be from 1 to 31 in a month. So, Friday can be Friday 2, Friday 9, ...
 # for the month of "2021-07". n_distinct() count the number of unique occurrences. Repeat for each month.   
 
@@ -215,6 +215,8 @@ number_days19 <- df2 %>%
   summarize(number_Jan2023 = n_distinct(Day))
 number_days19
 # number_days19 has only Monday and Sunday
+
+# There could be a possibility of using a function or loop through unique "YearMonth" variable and append the results
 
 # Bind the vectors of data into a dataframe w/o number_days1 and number_days19
 # because these two do not have complete seven days. So, this creates error while applying cbind. 
